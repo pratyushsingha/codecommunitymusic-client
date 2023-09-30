@@ -156,7 +156,7 @@ export default function LoginForm() {
                                 placeholder="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="pl-3 pr-10 py-2 rounded-lg"
+                                className="pr-10"
                             />
                                 <div className="absolute inset-y-0 right-2 flex items-center">
                                     <button

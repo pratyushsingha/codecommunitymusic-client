@@ -180,16 +180,18 @@ export default function SignUpForm() {
                         </div>
                         <div className="mb-4 relative">
                             <Label htmlFor="email">Password</Label>
-
                             <Input
                                 type={showPassword ? "text" : "password"}
                                 id="password"
                                 placeholder="password"
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                className="pl-3 pr-10 py-2 rounded-lg"
+                                onChange={(e) => {
+                                    setPasswordStrength(e.target.value.length);
+                                    setPassword(e.target.value);
+                                }}
+                                className="pr-10"
                             />
-                            <div className="absolute inset-y-0 right-2 top-6 flex items-center">
+                            <div className="absolute right-2 bottom-1 flex items-center">
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
